@@ -189,13 +189,11 @@ input,select{background:#12110F;color:#EFE8DA}
 </div>
 </article>
 <article style="flex: 1 1 340px; min-width: 0; background: #1B1916; border: 1px solid #2F2B25; display: flex; flex-direction: column">
-<div style="aspect-ratio: 16 / 9; background: repeating-linear-gradient(135deg, #2F2B25 0 14px, #1B1916 14px 28px); display: flex; align-items: flex-end; padding: 16px; box-sizing: border-box">
-<div style="background: #EFE8DA; color: #12110F; font-size: 13px; padding: 6px 10px">Photos coming soon</div>
-</div>
+<div style="display: flex; flex-direction: column; gap: 4px; background: #12110F"><button type="button" data-kx="0" aria-label="See all 15 photos" style="all: unset; cursor: pointer; position: relative; display: block; aspect-ratio: 16 / 9; overflow: hidden"><img src="img/kaixo/arnotegi-2-3.jpg" alt="Living room with sofa and dining area with yellow chairs, kitchen at the back" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; display: block"><span style="position: absolute; left: 16px; bottom: 16px; background: #EFE8DA; color: #12110F; font-size: 13px; padding: 6px 10px; letter-spacing: 0.04em">See all 15 photos</span></button><div style="display: flex; gap: 4px"><button type="button" data-kx="1" aria-label="Arnotegi 2: Bright living room with sofa, rug and side tables" style="all: unset; cursor: pointer; flex: 1 1 0; min-width: 0; aspect-ratio: 1; display: block"><img src="img/kaixo/arnotegi-2-1-thumb.jpg" alt="" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; display: block"></button><button type="button" data-kx="3" aria-label="Arnotegi 4: Laid dining table with the living room behind" style="all: unset; cursor: pointer; flex: 1 1 0; min-width: 0; aspect-ratio: 1; display: block"><img src="img/kaixo/arnotegi-4-1-thumb.jpg" alt="" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; display: block"></button><button type="button" data-kx="6" aria-label="Arnotegi 5.1: Linear kitchen with oven and dining area" style="all: unset; cursor: pointer; flex: 1 1 0; min-width: 0; aspect-ratio: 1; display: block"><img src="img/kaixo/arnotegi-5-1-1-thumb.jpg" alt="" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; display: block"></button><button type="button" data-kx="9" aria-label="Pagasarri: Bedroom with double bed, armchairs and wooden clothes rack" style="all: unset; cursor: pointer; flex: 1 1 0; min-width: 0; aspect-ratio: 1; display: block"><img src="img/kaixo/pagasarri-1-thumb.jpg" alt="" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; display: block"></button><button type="button" data-kx="12" aria-label="Pagasarri 5: Dining nook with round table and woven pendant lamp" style="all: unset; cursor: pointer; flex: 1 1 0; min-width: 0; aspect-ratio: 1; display: block"><img src="img/kaixo/pagasarri-5-1-thumb.jpg" alt="" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; display: block"></button></div></div>
 <div style="padding: 32px; display: flex; flex-direction: column; gap: 16px">
 <div style="font-family: 'Jost', sans-serif; font-size: 13px; letter-spacing: 0.24em; text-transform: uppercase; color: #C9AD74">Tourist apartments · Bilbao</div>
 <h3 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 34px; line-height: 1.15">Apartamentos Kaixo</h3>
-<p style="margin: 0; color: #B0A794">Details coming soon. Leave us your contact details and we will send them as soon as they are ready.</p>
+<p style="margin: 0; color: #B0A794">Refurbished, furnished holiday apartments in Bilbao. Price and yield are being finalised: leave your details and we will send you the fact sheet as soon as it is ready.</p>
 <div style="display: flex"><a href="#contacto" style="border: 1px solid #EFE8DA; color: #EFE8DA; text-decoration: none; padding: 0 24px; min-height: 48px; display: flex; align-items: center; font-weight: 500">Notify me when ready</a></div>
 </div>
 </article>
@@ -325,5 +323,30 @@ input,select{background:#12110F;color:#EFE8DA}
 </footer>
 
 </div>
+
+<div id="kx-box" role="dialog" aria-modal="true" aria-label="Kaixo Apartments gallery" hidden style="position: fixed; inset: 0; z-index: 1000; background: #0C0B0A; font-family: 'Jost', system-ui, sans-serif; color: #EFE8DA">
+<div style="position: absolute; inset: 0; display: flex; flex-direction: column">
+<div style="display: flex; justify-content: space-between; align-items: center; padding: 8px 16px; gap: 16px">
+<div id="kx-cap" style="font-size: 14px; color: #B0A794; min-width: 0"></div>
+<button type="button" id="kx-close" aria-label="Close" style="all: unset; cursor: pointer; color: #EFE8DA; display: flex; align-items: center; justify-content: center; min-width: 48px; min-height: 48px; font-size: 28px; line-height: 1">&times;</button>
+</div>
+<div style="flex: 1; min-height: 0; display: flex; align-items: center; justify-content: center; position: relative; padding: 0 8px 16px">
+<button type="button" id="kx-prev" aria-label="Previous photo" style="all: unset; cursor: pointer; color: #EFE8DA; display: flex; align-items: center; justify-content: center; min-width: 48px; min-height: 48px; font-size: 28px; line-height: 1; position: absolute; left: 8px; top: 50%; transform: translateY(-50%); background: rgba(18,17,15,.6)">&#8249;</button>
+<img id="kx-img" alt="" style="max-width: 100%; max-height: 100%; object-fit: contain; display: block">
+<button type="button" id="kx-next" aria-label="Next photo" style="all: unset; cursor: pointer; color: #EFE8DA; display: flex; align-items: center; justify-content: center; min-width: 48px; min-height: 48px; font-size: 28px; line-height: 1; position: absolute; right: 8px; top: 50%; transform: translateY(-50%); background: rgba(18,17,15,.6)">&#8250;</button>
+</div>
+</div>
+</div>
+<script>(function(){var P=[["arnotegi-2-3","Arnotegi 2","Living room with sofa and dining area with yellow chairs, kitchen at the back"],["arnotegi-2-1","Arnotegi 2","Bright living room with sofa, rug and side tables"],["arnotegi-2-2","Arnotegi 2","Living room with sofa and TV by the window"],["arnotegi-4-1","Arnotegi 4","Laid dining table with the living room behind"],["arnotegi-4-2","Arnotegi 4","Fitted kitchen and glass dining table"],["arnotegi-4-3","Arnotegi 4","Dining table detail with yellow chairs"],["arnotegi-5-1-1","Arnotegi 5.1","Linear kitchen with oven and dining area"],["arnotegi-5-1-2","Arnotegi 5.1","White kitchen with black worktop"],["arnotegi-5-1-3","Arnotegi 5.1","Fitted kitchen front"],["pagasarri-1","Pagasarri","Bedroom with double bed, armchairs and wooden clothes rack"],["pagasarri-2","Pagasarri","Double bed with cane headboard and cushions"],["pagasarri-3","Pagasarri","Breakfast tray on the bed"],["pagasarri-5-1","Pagasarri 5","Dining nook with round table and woven pendant lamp"],["pagasarri-5-2","Pagasarri 5","Linear kitchen open to the living room"],["pagasarri-5-3","Pagasarri 5","White kitchen with wooden worktop"]],box=document.getElementById('kx-box'),img=document.getElementById('kx-img'),cap=document.getElementById('kx-cap'),i=0,last=null,sx=null;
+function show(n){i=(n+P.length)%P.length;img.src='img/kaixo/'+P[i][0]+'.jpg';img.alt=P[i][2];cap.textContent=P[i][1]+' · '+(i+1)+' / '+P.length;}
+function open(n){last=document.activeElement;show(n);box.hidden=false;document.body.style.overflow='hidden';document.getElementById('kx-close').focus();}
+function close(){box.hidden=true;document.body.style.overflow='';if(last)last.focus();}
+document.querySelectorAll('[data-kx]').forEach(function(b){b.addEventListener('click',function(){open(+b.getAttribute('data-kx'));});});
+document.getElementById('kx-close').onclick=close;document.getElementById('kx-prev').onclick=function(){show(i-1);};document.getElementById('kx-next').onclick=function(){show(i+1);};
+box.addEventListener('click',function(e){if(e.target===box||e.target===box.firstElementChild)close();});
+document.addEventListener('keydown',function(e){if(box.hidden)return;if(e.key==='Escape')close();if(e.key==='ArrowLeft')show(i-1);if(e.key==='ArrowRight')show(i+1);});
+box.addEventListener('touchstart',function(e){sx=e.touches[0].clientX;},{passive:true});
+box.addEventListener('touchend',function(e){if(sx===null)return;var d=e.changedTouches[0].clientX-sx;if(Math.abs(d)>50)show(i+(d<0?1:-1));sx=null;});
+})();</script>
 </body>
 </html>
